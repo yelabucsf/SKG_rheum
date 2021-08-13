@@ -1,13 +1,15 @@
 ---
-title: "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen. Ashouri and McCarthy et al."
-date: "August 12, 2021"
+title: "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen."
+date: "August 13, 2021"
 output:
   html_document:
     toc: true
     keep_md: true
 ---
 
-Code to reproduce analyses and panels for Ashouri and McCarthy et al.
+This repo contains the code for the analyses and figures from "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen". 
+
+This document is divided into six sections. The input and output files and jupyter notebooks are listed and described first (1. Directory). The next sections describe the experiment and analysis for the bulk RNA sequencing data (2. Bulk RNA Sequencing Analysis) and for the single cell RNA sequencing data in three sections (3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis, 4. Trajectory Analysis, and 5 TCR analysis). For each section, the jupyter notebooks that go along with each analysis are listed along with the section headers within the notebook to facilitate easily finding code for a particular figure/analysis. The last section (6. Other Software Versions) details software versions not provided in the previous sections.
 
 
 ### 1. Directory
@@ -198,7 +200,7 @@ Sections:
   + Ranked list for GSEA  
   + Other
 
-### 3. Single Cell RNA (5'10x-VDJ) Sequencing - Cell sub-type and T.4N_Nr4a1 Analysis
+### 3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis
 
     Sequencing (8 wells of 5'10x-VDJ sequenced on NovaSeq 6000)
 
