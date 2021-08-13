@@ -1,0 +1,13 @@
+﻿,mouse,genotype,gfp,subgroup
+X1a,1,SKG,Low,SKG_low
+X2a,2,SKG,Low,SKG_low
+X3a,3,SKG,Low,SKG_low
+X1b,1,SKG,High,SKG_high
+X2b,2,SKG,High,SKG_high
+X3b,3,SKG,High,SKG_high
+X4a,4,WT,Low,WT_low
+X5a,5,WT,Low,WT_low
+X6a,6,WT,Low,WT_low
+X4b,4,WT,High,WT_high
+X5b,5,WT,High,WT_high
+X6b,6,WT,High,WT_high

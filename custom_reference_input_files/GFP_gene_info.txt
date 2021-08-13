@@ -1,0 +1,2 @@
+eGFP	manual	exon	1	720	.	+	.	gene_id "eGFP"; gene_version "1"; transcript_id "eGFP"; transcript_version "1"; exon_number "1"; gene_name "eGFP"; gene_source "manual"; gene_biotype "protein_coding"; transcript_name "eGFP"; transcript_source "manual"
+
