@@ -4,6 +4,7 @@ date: "August 12, 2021"
 output:
   html_document:
     toc: true
+    keep_md: true
 ---
 
 
@@ -294,7 +295,8 @@ mm10_withGFP transcriptome creation:
 
   + Input files: /custom_reference_input_files  
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 #Concatenate GFP sequence and GFP gene description to files from refdata-cellranger-mm10-3.0.0
 cat GFP_sequence.txt>>genome.fa
 cat GFP_gene_info.txt>>genes.gtf
