@@ -7,60 +7,8 @@ output:
     keep_md: true
 ---
 
+Code to reproduce analyses and panels for Ashouri and McCarthy et al.
 
-### Table of Contents  
-**1. Directory**
-
-  + Jupyter Notebooks
-  + /adata_object
-  + /custom_reference_input_files
-  + /data
-  + /results
-    + /bulk_RNA_seq
-    + /single_cell_RNA_seq
-      + /correlations
-      + /differential_expression
-      + /ranked_lists
-      + /trajectory
-      + /TCR
-  + /scripts
-  
-  
-
-**2. Bulk RNA Sequencing Analysis**
-
-  - Sequencing
-  - Results
-  - Analysis
-    + 1_SKG_RA_bulk_RNA_seq_analysis.ipynb
-
-
-**3. Single Cell RNA Sequencing Analysis**
-
-  - Sequencing
-  - Alignment
-  - Analysis
-    + 2_SKG_RA_single_cell_preprocessing_mouse.ipynb
-    + 3_SKG_RA_single_cell_clustering.ipynb
-    + 4_SKG_RA_single_cell_sub_type_profiling.ipynb
-    + 5_SKG_RA_single_cell_T_4_Nr4a1_analysis.ipynb
-
-
-**4. Trajectory Analysis**
-
-  - Analysis Pipeline
-  - Analysis
-    + 6_SKG_RA_single_cell_trajectory_analysis.ipynb
-
-**5. TCR Analysis**
-
-  - Analysis
-    + 7_SKG_RA_single_cell_TRA_clonotype.ipynb
-    + 8_SKG_RA_single_cell_TRBV.ipynb
-    + 9_SKG_RA_single_cell_MAST.ipynb
-
-
-**6. Other Software Versions**
 
 ### 1. Directory
 
