@@ -121,18 +121,18 @@ stat–The value of the test statistic for the gene or transcript
 pvalue–P-value of the test for the gene or transcript   
 padj–Adjusted P-value for multiple testing for the gene or transcript
 
-|               **data_S1_diff_exp_WT_low_SKG_low.csv**
-|               **data_S1_diff_exp_WT_low_SKG_low.csv**
-|               **data_S1_diff_exp_WT_high_SKG_high.csv**
-|               **data_S1_diff_exp_SKG_low_SKG_high.csv**
-|
-|               **data_S2_heatmap_gene_list_with_modules.csv**: *Ordered list of genes in heat map with module annotations*  
-|               **Gene_list_for_heatmap_2021_02_v1_orig.csv**: *List of genes to annotate in the heatmap*  
-|               **Gene_list_for_heatmap_2021_02_v1.csv**: *Same file as above with added column "module" to indicate module assignment*  
-|
-|               **dotplot_FEA_pathways_for_gene_modules.csv**: *Curated list of enriched GO:BP or KEGG pathways for each gene module*
-|
-|               **fig_1_diff_exp_SKG_high_v_WT_High_ranked.rnk**: - *Ranked list for differential expression of SKG High v WT High*     
+**data_S1_diff_exp_WT_low_SKG_low.csv**
+**data_S1_diff_exp_WT_low_SKG_low.csv**
+**data_S1_diff_exp_WT_high_SKG_high.csv**
+**data_S1_diff_exp_SKG_low_SKG_high.csv**
+
+**data_S2_heatmap_gene_list_with_modules.csv**: *Ordered list of genes in heat map with module annotations*  
+**Gene_list_for_heatmap_2021_02_v1_orig.csv**: *List of genes to annotate in the heatmap*  
+**Gene_list_for_heatmap_2021_02_v1.csv**: *Same file as above with added column "module" to indicate module assignment*  
+
+**dotplot_FEA_pathways_for_gene_modules.csv**: *Curated list of enriched GO:BP or KEGG pathways for each gene module*
+
+**fig_1_diff_exp_SKG_high_v_WT_High_ranked.rnk**: - *Ranked list for differential expression of SKG High v WT High*     
 
 |
 |
