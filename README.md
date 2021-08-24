@@ -417,7 +417,7 @@ Sections:
   
 ### 6. Other Software Versions
 
-Python3
+Python 3
 
 R v.3.5.1
 
