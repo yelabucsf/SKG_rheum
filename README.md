@@ -1,13 +1,13 @@
 ---
 title: "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen."
-date: "August 13, 2021"
+date: "August 24, 2021"
 output:
   html_document:
     toc: true
     keep_md: true
 ---
 
-This repo contains the code for the analyses and figures from "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen". 
+This repo contains the code for the analyses from "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen". 
 
 This document is divided into six sections. The input and output files and jupyter notebooks are listed and described first (1. Directory). The next sections describe the experiment and analysis for the bulk RNA sequencing data (2. Bulk RNA Sequencing Analysis) and for the single cell RNA sequencing data in three sections (3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis, 4. Trajectory Analysis, and 5 TCR analysis). For each section, the jupyter notebooks that go along with each analysis are listed along with the section headers within the notebook to facilitate easily finding code for a particular figure/analysis. The last section (6. Other Software Versions) details software versions not provided in the previous sections.
 
@@ -50,12 +50,12 @@ This document is divided into six sections. The input and output files and jupyt
 **G1_S.csv**: *Mus musculus G1/S gene list from REACTOME*  
 **G2_M.csv**: *Mus musculus G2/M gene list from REACTOME*  
 **LN_protein_data.csv**: *Vb frequency for each subgroup*  
-**Vb11_combo_joint.csv**   
-**Vb14_combo_joint.csv**  
-**Vb3_combo_joint.csv**  
-**Vb5_combo_joint.csv**  
-**Vb6_combo_joint.csv**  
-**Vb8_combo_joint.csv**  
+**Vb11_combo_joint.csv**: *Vb11 frequency post-arthritis induction*     
+**Vb14_combo_joint.csv**: *Vb14 frequency post-arthritis induction*   
+**Vb3_combo_joint.csv**: *Vb3 frequency post-arthritis induction*   
+**Vb5_combo_joint.csv**: *Vb5 frequency post-arthritis induction*   
+**Vb6_combo_joint.csv**: *Vb6 frequency post-arthritis induction*   
+**Vb8_combo_joint.csv**: *Vb8 frequency post-arthritis induction*   
 
 
     /results 
@@ -71,10 +71,10 @@ stat–The value of the test statistic for the gene or transcript
 pvalue–P-value of the test for the gene or transcript   
 padj–Adjusted P-value for multiple testing for the gene or transcript
 
-**data_S1_diff_exp_WT_low_SKG_low.csv**
-**data_S1_diff_exp_WT_low_SKG_low.csv**
-**data_S1_diff_exp_WT_high_SKG_high.csv**
-**data_S1_diff_exp_SKG_low_SKG_high.csv**
+**data_S1_diff_exp_WT_low_SKG_low.csv**  
+**data_S1_diff_exp_WT_low_SKG_low.csv**  
+**data_S1_diff_exp_WT_high_SKG_high.csv**  
+**data_S1_diff_exp_SKG_low_SKG_high.csv**  
 
 **data_S2_heatmap_gene_list_with_modules.csv**: *Ordered list of genes in heat map with module annotations*  
 **Gene_list_for_heatmap_2021_02_v1_orig.csv**: *List of genes to annotate in the heatmap*  
@@ -82,10 +82,7 @@ padj–Adjusted P-value for multiple testing for the gene or transcript
 
 **dotplot_FEA_pathways_for_gene_modules.csv**: *Curated list of enriched GO:BP or KEGG pathways for each gene module*
 
-**fig_1_diff_exp_SKG_high_v_WT_High_ranked.rnk**: - *Ranked list for differential expression of SKG High v WT High*     
-
-|
-|
+**fig_1_diff_exp_SKG_high_v_WT_High_ranked.rnk**: *Ranked list for differential expression of SKG High v WT High*     
 
 
 - /single_cell_RNA_seq
@@ -164,9 +161,24 @@ Batch 3 (H96272)
 1b_SKGNur_CD4Naive_GFPhi  
 3b_SKGNur_CD4Naive_GFPhi  
 
-    Results  
+    Results 
 
-[] Add sequencing reads per sample  
+Note: #PE Sequencing Reads are reads after filtering for QC metrics
+
+Sample|#PE Sequencing Reads
+------|--------------
+1a|41,942,126
+1b|43,098,857
+2a|34,456,547
+2b|36,633,847
+3a|37,967,524
+3b|56,713,716
+4a|37,885,107
+4b|37,201,324
+5a|32,793,434
+5b|33,106,184
+6a|35,015,201
+6b|34,316,756
 
 
     Analysis
