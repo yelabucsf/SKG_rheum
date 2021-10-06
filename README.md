@@ -1,13 +1,13 @@
 ---
-title: "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen."
-date: "August 24, 2021"
+title: "Arthritogenic SKG T cells have a transcriptional program of activation and a repertoire pruned by superantigen."
+date: "October 6, 2021"
 output:
   html_document:
     toc: true
     keep_md: true
 ---
 
-This repo contains the code for the analyses from "Arthritogenic T cells have a transcriptional program of activation and a repertoire pruned by superantigen". 
+This repo contains the code for the analyses from "Arthritogenic SKG T cells have a transcriptional program of activation and a repertoire pruned by superantigen". All raw and processed data objects are currently being uploaded to GEO.
 
 This document is divided into six sections. The input and output files and jupyter notebooks are listed and described first (1. Directory). The next sections describe the experiment and analysis for the bulk RNA sequencing data (2. Bulk RNA Sequencing Analysis) and for the single cell RNA sequencing data in three sections (3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis, 4. Trajectory Analysis, and 5 TCR analysis). For each section, the jupyter notebooks that go along with each analysis are listed along with the section headers within the notebook to facilitate easily finding code for a particular figure/analysis. The last section (6. Other Software Versions) details software versions not provided in the previous sections.
 
@@ -28,9 +28,9 @@ This document is divided into six sections. The input and output files and jupyt
 
 
 
-    /adata_object
+    /adata_object (not included in Github repo - GEO upload in progress)
 **adata_only_T_cells.h5ad**: *scanpy anndata object with processed data*  
-**adata_only_T_cells_scvelo_Nr4a1_high_cluster_dynamical_050321.h5ad**: *scvelo anndata object with trajectory analysis*  
+**single_cell_scvelo_T_4_Nr4a1_cluster.h5ad**: *scvelo anndata object with trajectory analysis*  
 
 
     /custom_reference_input_files
@@ -124,8 +124,8 @@ padj–Adjusted P-value for multiple testing for the gene or transcript
 **select_TRBV_sample_frequencies_Nr4a1_high_cluster.csv**  
 **select_TRBV_sample_frequencies_all_cells.csv**  
 **volcano_plot_gene_list_to_label.csv**  
-**TRBV3_MAST_SKG_high_v_SKG_low.csv**  
-**TRBV19_MAST_SKG_high_v_SKG_low.csv**  
+**TRBV3_MAST_SKG_high_v_SKG_low_cell_types.csv**  
+**TRBV19_MAST_SKG_high_v_SKG_low_cell_types.csv**  
 
 
     /scripts
