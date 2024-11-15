@@ -1,15 +1,15 @@
 ---
-title: "Arthritogenic SKG T cells have a transcriptional program of activation and a repertoire pruned by superantigen."
-date: "October 6, 2021"
+title: "Endogenous antigens shape the transcriptome and TCR repertoire in an autoimmune arthritis model"
+date: "November 15, 2024"
 output:
   html_document:
     toc: true
     keep_md: true
 ---
 
-This repo contains the code for the analyses from "Arthritogenic SKG T cells have a transcriptional program of activation and a repertoire pruned by superantigen". All raw and processed data objects are currently being uploaded to GEO.
+This repo contains the code for the analyses from "Endogenous antigens shape the transcriptome and TCR repertoire in an autoimmune arthritis model". The data discussed in this publication have been deposited in NCBI's Gene Expression Omnibus (Edgar et al., 2002) and are accessible through GEO Series accession number GSE185577 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE185577).
 
-This document is divided into six sections. The input and output files and jupyter notebooks are listed and described first (1. Directory). The next sections describe the experiment and analysis for the bulk RNA sequencing data (2. Bulk RNA Sequencing Analysis) and for the single cell RNA sequencing data in three sections (3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis, 4. Trajectory Analysis, and 5 TCR analysis). For each section, the jupyter notebooks that go along with each analysis are listed along with the section headers within the notebook to facilitate easily finding code for a particular figure/analysis. The last section (6. Other Software Versions) details software versions not provided in the previous sections.
+This document is divided into six sections. The input and output files and jupyter notebooks are listed and described first (1. Directory). The next sections describe the experiment and analysis for the bulk RNA sequencing data (2. Bulk RNA Sequencing Analysis) and for the single cell RNA sequencing data in three sections (3. Single Cell RNA Seq - Cell sub-type and T.4N_Nr4a1 Analysis, 4. Trajectory Analysis, and 5. TCR analysis). For each section, the jupyter notebooks that go along with each analysis are listed along with the section headers within the notebook to facilitate easily finding code for a particular figure/analysis.
 
 
 ### 1. Directory
@@ -24,11 +24,11 @@ This document is divided into six sections. The input and output files and jupyt
 **6_SKG_RA_single_cell_trajectory_analysis.ipynb**  
 **7_SKG_RA_single_cell_TRA_clonotype.ipynb**  
 **8_SKG_RA_single_cell_TRBV.ipynb**  
-**9_SKG_RA_single_cell_MAST.ipynb**  
+**9_protein_MFI_statisics.ipynb**  
+**10_enriched_TRBV_analysis.ipynb** 
 
 
-
-    /adata_object (not included in Github repo - GEO upload in progress)
+    /adata_object (available on GEO Series accession number GSE185577 )
 **adata_only_T_cells.h5ad**: *scanpy anndata object with processed data*  
 **single_cell_scvelo_T_4_Nr4a1_cluster.h5ad**: *scvelo anndata object with trajectory analysis*  
 
@@ -299,7 +299,9 @@ Sections:
   + Stacked Violin Plots and Matrix Plots  
   + Dot Plot for Cell Type Markers  
   + Distribution over cell sub-types by subgroup  
-  + Scoring for bulk RNA Seq modules  
+  + Scoring for bulk RNA Seq modules (part 1)
+  + Scoring for Vista TCR Activation
+  + Scoring for bulk RNA Seq modules (part 2)
   + Calculate Cell Cycle  
   + Save adata object  
 
@@ -315,10 +317,12 @@ Sections:
   + Differential Expression for T.4 Nr4a1 cluster
   + Volcano Plot for T.4N Nr4a1 cluster v other cells
   + UMAP for SKG High v WT High in T.4N Nr4a1 cluster
+  + Differential expression of SKG Low versus WT Low in T.4N Nr4a1 high cluster
   + Differential expression for SKG High v WT High in T.4N Nr4a1 high cluster
   + Volcano Plot for SKG High v WT High in T.4N Nr4a1 cluster
   + UMAPs for gene markers
   + Correlation Heatmaps
+  + Natural anergy signature by Egr2 and Tnfrsf9 subgroups
   + Volcano Plot Egr2 High v Tnfrsf9 High
   + Cell Cycle Analysis
   
@@ -387,42 +391,27 @@ Sections:
   + Plot TRBV abundance by subgroup
   + TRBV diff between SKG High and SKG Low
   + Barplots for TRBV frequencies by subgroup
-  + Analysis for Protein Data
   + Analysis for T.4N Nr4a1 cluster
   
-
-**9_SKG_RA_single_cell_MAST.ipynb**
-
-Software versions:
-python: 
-rpy2 v.3.3.2
-anndata2ri v.1.0.4
-
-R: 
-MAST v.1.12.0
-
+**9_protein_MFI_statisics.ipynb**
 
 Sections:
 
-  + Remove Dual TRA cells
-  + Subset adata to SKG TRBV3 cells
-  + Set up adata object for MAST
-  + Run MAST for TRBV3
-  + Save results
-  + Volcano plot for TRBV3
-  + Setup TRBV19 adata object for MAST
-  + Run MAST for TRBV19
-  + Volcano plot for TRBV19
+  + 1) MFI protein surface markers for WT versus SKG
+  + 2) LN protein TRBV WT versus SKG and 3) LN and joint protein LN SKG High versus SKG Low
+  + 4) Vb freq SKG Zym versus PBS
+  + 5) MFI for GFP/Nr4a1 in TRBV enriched versus non-enriched TRBVs
   
-  
-### 6. Other Software Versions
+**10_enriched_TRBV_analysis.ipynb**
 
-Python 3
+Sections:
 
-R v.3.5.1
-
-Jupiter Notebook version info:  
-jupyter-notebook : 6.0.3  
-ipykernel        : 5.1.4  
-jupyter lab      : 1.2.6  
+  + Differential expression Nr4a1 high cluster TRBV enriched WT High versus SKG High
+  + Differential expression SKG High TRBV enriched versus non-enriched
+  + Differential expression WT High TRBV enriched versus non-enriched
+  + Volcano Plot Nr4a1 high cluster TRBV enriched WT High versus SKG High
+  + Volcano Plot SKG High TRBV enriched versus non-enriched
+  + Volcano Plot for WTHigh TRBV Enriched versus non-enriched
+  + Odds ratio plot for Tnfrsf9/Egr2 and TRBV Enriched/Non-enriched in WT High and SKG High
+  + LME and barplots for protein MFI for Sag reactive versus non-Sag reactive
 
